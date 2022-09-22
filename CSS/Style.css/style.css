@@ -1,0 +1,79 @@
+/* 전체적용 */
+*{
+  margin: 2px;
+  padding: 2px;
+}
+
+/* 레이아웃 */
+nav {
+  background-color: #0B0A0A;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(240, 248, 255);
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+}
+
+
+
+header {
+  background-color: #53EAD4;
+}
+
+header section {
+  display: flex;
+  margin: 2px;
+}
+
+.header_left {
+  width: 30%;
+  text-align: center;
+
+}
+
+.header_right{
+  width: 70%;
+}
+
+main {
+  background-color: #00C5F2;
+  display: flex;
+/*  flex-wrap: wrap;*/
+  
+}
+
+main section {
+  width: 25%;
+  margin: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #FF8749;
+  display: flex;
+  padding: 3px;
+  margin: 2px;
+}
+
+footer  h2, footer  ul {
+  margin: 15px;
+}
+
+img {
+  border-radius: 35%;
+}
+
+nav a { 
+  text-decoration: none;
+  color: azure;
+  padding: 10px;
+}
+
+nav a:hover{
+  background-color: #FF8749;
+  color: darkblue;
+}
