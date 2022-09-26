@@ -1,9 +1,15 @@
-# ES6
-## HTML/CSS
-### CSS
-+ 가변길이 vh, vw
-+ flexBox로 중앙배치
-+ justify - content : center(중심축기준)
-+ align - items : center (반대축 기준)
-+ 중심축 결정 : flex-direction : colum(위에서 아래)
-, flex-direction:row(좌에서 우로)
+# 자바스크립트
++ <script>태그 사용
+  + 내부
+    + head태그 영역
+    + body태그 영역
+    - script는 어디든 가능은 함.
+  + 외부
+    + src 속성
+
+  + ES6+
+    + 화살표 함수사용
+    + 백틱문자열 사용
+
+
+

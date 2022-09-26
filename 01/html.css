@@ -4,7 +4,7 @@
   padding: 0px;
 }
 header{
-  height: 10vh;
+  height: 10vh;         /*전체 화면의 10%*/
   background-color: rgb(104, 11, 122);
   color: aliceblue;
   display: flex;

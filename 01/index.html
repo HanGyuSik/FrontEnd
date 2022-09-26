@@ -7,16 +7,24 @@
   <title>JS PWA</title>
   <!--Style-->
   <link rel="stylesheet" href="./html.css">
-
+  <!--내부JavaScript-->
+  <!--위치1-->
+  <script>
+//  alert("hello world");
+//  console.log("hello world");
+  </script>
+<!--외부JavaScript-->
+<script src="./index.js"></script>
 </head>
 <body>
   <div id="root">                                       <!--id = #-->
     <header>
-      <h1>제목</h1>
+      <h1>자바스크립트 Test</h1>
     </header>
     <main id="content">
       <section id="bt">
-        <button class="bt1">버튼1</button>                   <!--class = .-->        
+        <button class="bt1" onclick="funPrint(1);">버튼1</button>
+        <button class="bt2" onclick="funPrint(2);">버튼2</button>             <!--인수는 html에서 입력-->>     
       </section>
     </main>
   </div>
