@@ -1,0 +1,51 @@
+/*레이아웃*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+header{
+  height: 10vh;
+  background-color: rgb(104, 11, 122);
+  color: aliceblue;
+  display: flex;
+  justify-content: center; /*중심축 기준 중앙*/
+  align-items: center;
+  font-size: larger;
+  top : 0px;
+  position: sticky
+}
+main{
+  height: 90vh;
+  background-color: rgb(236, 241, 240);
+  display: flex;
+  justify-content: center; /*중심축 기준 중앙*/
+  align-items: center;
+}
+
+main>section{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*버튼*/
+button{
+  display: inline-block;
+  margin: 1vh;
+  width: 100%;
+  width: 50vw; /*화면 클 경우의 변환*/
+  max-width: 200px; /*최대치 길이*/
+  height: 10vw;
+  max-height: 50px;
+  border-radius: 15%;
+  border: none;
+  background-color: rgb(253, 129, 71);
+  color: whitesmoke;
+  font-size: medium; /*글자 크기*/
+
+}
+
+button:hover,button:active{ /*버튼 클릭전 색상변환*/
+  background-color: aqua;
+}
