@@ -14,7 +14,8 @@
 //  console.log("hello world");
   </script>
 <!--외부JavaScript-->
-<script src="./index.js"></script>
+<!--<script src="./index.js"></script>-->
+<script src="./script/helps.js"></script>
 </head>
 <body>
   <div id="root">                                       <!--id = #-->
@@ -22,12 +23,16 @@
       <h1>자바스크립트 Test</h1>
     </header>
     <main id="content">           <!--id : 유일값으로 설정-->
+      <section id="msg">
+        
+      </section>
       <section id="bt">
-        <button class="bt1" onclick="funPrint(1);">버튼1</button>         <!--class : 다수로 설정-->
-        <button class="bt1" onclick="funPrint(2);">버튼2</button>             <!--인수는 html에서 입력-->     
+        <button class="bt1" onclick="show();">확인</button>       <!--class : 다수로 설정-->
+        <button class="bt1" onclick="reset();">리셋</button>
+<!--    <button class="bt1" onclick="funPrint(2);">버튼2</button> -->            <!--인수는 html에서 입력-->     
       </section>
     </main>
   </div>
-  <!--<script></script>-->
+  <!--<script></scrip>-->
 </body>
 </html>

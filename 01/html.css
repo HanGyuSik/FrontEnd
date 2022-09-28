@@ -17,6 +17,7 @@ header{
 main{
   height: 90vh;
   background-color: rgb(236, 241, 240);
+  flex-direction: column;
   display: flex;
   justify-content: center; /*중심축 기준 중앙*/
   align-items: center;
@@ -27,8 +28,19 @@ main>section{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1vh;
 }
 
+#divMsg{
+  display: inline-block;
+  margin: 1vh; 
+}
+
+/*
+#msg{
+  display: none;
+}
+*/
 /*버튼*/
 button{
   display: inline-block;
