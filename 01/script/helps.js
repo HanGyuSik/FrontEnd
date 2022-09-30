@@ -43,10 +43,7 @@ const show = ()=>{
 
   // console,log(msgDiv.getComputedStyle()); 아직 구현안됨.
 
-}
-
-const reset = ()=>{
-  const leg = '';
-  document.getElementById(F1).style.display = 'block';
 
 }
+
+
