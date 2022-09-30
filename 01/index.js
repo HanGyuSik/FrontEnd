@@ -31,13 +31,13 @@ const showOk = ()=>{
  dispDom("block", "none", "block","none",);
 
   // 주사위
-  let tag = `<img src="/이미지/${randNum}.png">`
+  let tag = `<img src="./이미지/${randNum}.png">`
   
   // ox
   let ox;
   if(randNum==userNum) ox= 'o';
   else ox = 'x';
-  tag = `${tag}<img src="./이미지/${o}.png">`;
+  tag = `${tag}<img src="./이미지/${ox}.png">`;
   document.getElementById("msg").innerHTML=tag;
   console.log(`확인 => ${userNum}`);
 
