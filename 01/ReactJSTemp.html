@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World</title>
+  <!--Don't use this production-->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!--React-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //Hello 컴포넌트
+  /*class Hello extends React.Component{
+      render(){
+        return React.createElement('h1', null, `Hello${this.props.toWh}`);
+      }
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(Hello, {toWh:'React'}, null));
+    */
+    // Dom 랜더링
+    function MyApp(){
+      return (
+        <p>
+          <h1>Hello, React</h1>
+        </p>
+        )
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<MyApp/>);
+  </script>
+</body>
+</html>
+
