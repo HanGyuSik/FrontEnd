@@ -1,25 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import MyTick from './componet/MyTick';
 
-function App() {
+// 이미지같은 곳에서도 /가 필수, class는 HTML과의 충돌을 대비하여 이름 변경
+function App() { // 함수
+  console.log("");
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <MyTick/>
     </div>
   );
 }
 
-export default App;
+export default MyTick;

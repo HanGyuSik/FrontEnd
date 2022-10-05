@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './Sigong.png';
 import './App.css';
 import MyTick from './MyCom/MyTick';
 
