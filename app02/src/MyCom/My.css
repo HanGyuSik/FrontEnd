@@ -1,0 +1,14 @@
+h2 {
+  margin: 1px;
+  font-size: 2rem;
+  padding: 1px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  height: 5vh;
+  
+}
+.Ti {
+  width: 100%;
+  color: rgb(54, 19, 151);
+  font-size: 3rem;
+}
