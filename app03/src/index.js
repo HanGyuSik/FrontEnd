@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import React_0 from './MyWeb_1/React_0';
+import MyNav from './MyWeb_1/MyNav';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root')); // root를 베낀 가상돔
 root.render(  //
-  <React.StrictMode> 
-    <React_0/>
+  <React.StrictMode>
+    <MyNav />
   </React.StrictMode>
 );
 

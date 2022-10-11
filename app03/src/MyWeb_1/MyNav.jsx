@@ -1,9 +1,9 @@
 import './Css/Web.css';
-import React_1 from './React_1';
-import React_2 from './React_2';
-import React_3 from './React_3';
+import MyHeader from './MyHeader';
+import MyMain from './MyMain';
+import MyFooter from './MyFooter';
 
-  function React_0() {
+  function MyNav() {
     return (
       <>
         <nav>
@@ -20,10 +20,10 @@ import React_3 from './React_3';
             <li><i className="fa-brands fa-square-instagram"></i></li>
           </ul>
         </nav>
-        <React_1/>
-        <React_2/>
-        <React_3/>
+        <MyHeader/>
+        <MyMain/>
+        <MyFooter/>
       </>
     );
   }
-export default React_0;
+export default MyNav;

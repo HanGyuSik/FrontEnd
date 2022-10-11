@@ -1,6 +1,6 @@
 import './Css/Web.css';
 
-function React_3() {
+function MyFooter() {
   return (
     <footer>
       <h2 className='tt'>AI 빅데이터분석 풀스택서비스 <br/> SW 개발자 양성과정</h2>
@@ -13,4 +13,4 @@ function React_3() {
     </footer>
   );
 }
-export default React_3;
+export default MyFooter;

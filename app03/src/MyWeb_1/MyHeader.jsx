@@ -1,6 +1,6 @@
 import './Css/Web.css';
 
-function React_1() {
+function MyHeader() {
   return (
     <header>
       <section>
@@ -14,4 +14,4 @@ function React_1() {
 
   );
 }
-export default React_1;
+export default MyHeader;
