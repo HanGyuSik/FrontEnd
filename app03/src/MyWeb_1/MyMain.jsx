@@ -7,8 +7,8 @@ function MyMain() {
    <main>
     <MySection h1 = "HTML" p="testhtml"/>
     <MySection h1 = "CSS" p="testhtml"/>
-    <MySection h1 = "JavaScript"p="testhtml"/>
-    <MySection h1 = "React"p="testhtml"/>
+    <MySection h1 = "JavaScript" p="testhtml"/>
+    <MySection h1 = "React" p="testhtml"/>
 
    </main>
       

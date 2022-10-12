@@ -1,0 +1,24 @@
+
+p{
+  background-color: darkturquoise;
+  color: black;
+  text-align: center;
+  padding: 5px;
+}
+
+/*MyHello 컴포넌트*/
+.divHello{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spanHello{
+  color: blue;
+}
+
+.spanNum{
+  color: brown;
+}
+

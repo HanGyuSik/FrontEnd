@@ -1,11 +1,13 @@
+import style from './App.module.css';
+import MyCom from './components/MyCom';
 
-import './com/Style.css/style.css';
-import './com/Style.css/header.css';
-import MyNav from './com/MyNav';
 
 function App() {
   return (
-    <MyNav />
+    <>
+      <p className={style.p2}>App</p>
+      <MyCom />
+    </>
   );
 }
 
