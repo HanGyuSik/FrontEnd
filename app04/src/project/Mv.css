@@ -1,0 +1,27 @@
+*{
+  margin: 5px;
+  padding: 1px;
+}
+h1{
+  text-align: center;
+  background-color: black;
+  color: white;
+
+}
+ul{
+  border : 2px solid black;
+}
+li{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+span{
+  font-size: 20px;
+  display: flexbox;
+}
+.pan1{
+}
+.pan2{
+  
+}

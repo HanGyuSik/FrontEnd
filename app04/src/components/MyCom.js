@@ -18,7 +18,7 @@ function MyCom(probs) {
   let [cnt, setCnt] = useState(0);    // 변경하는 값  let, 초기값
   
   const upCnt = () =>{
-    setCnt(cnt++);
+    setCnt(++cnt);
     console.log(cnt)
   }
   return (
@@ -28,10 +28,10 @@ function MyCom(probs) {
         {lis}
       </ul>
       <div>
-        {/* <span onClick={()=>{
+        {<span onClick={()=>{
           cnt++;
           console.log(cnt)
-        }}>🎁</span> */}
+        }}>🎁</span> }
         <span onClick={upCnt}>🎁</span>
         <span>{cnt}</span>
       </div>
