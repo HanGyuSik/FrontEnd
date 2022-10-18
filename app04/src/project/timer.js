@@ -1,0 +1,18 @@
+import { useEffect, useState } from "react";
+export default function MyTimer() {
+  let [t, setT] = useState(null);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setT(new Date().toLocaleTimeString())
+    }, 1000);
+
+    return() =>{clearInterval(timer)};
+    
+  }, [])
+
+
+
+  return (
+    <span>{t}</span>
+  );
+}

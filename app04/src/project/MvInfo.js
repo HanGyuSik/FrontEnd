@@ -1,5 +1,13 @@
 import './Mv.css';
+import t from './timer'
 import mv from '../jsondata/mv.json';
+
+
+//useState Hook
+import { useState, useEffect } from 'react';
+import React from 'react';
+import MyTimer from './timer';
+
 function MvInfo() {
 
   //json데이터 추출
@@ -53,14 +61,69 @@ function MvInfo() {
     }
 
   }
-  console.log(myinfo)
+  //console.log(myinfo)
   // 화면에 출력할 내용을 JSX로 만들기
+
+  // count 제어
+  let cntup = 0;
+  let cntdown = 0;
+
+  //state변수 
+  let [cntUpSt, setCntUpSt] = useState(0); //변수와 함수를 쌍으로 반환 , (0) : 초기값
+  let [cntDownSt, setCntDownSt] = useState(0);
+
+  const handleup = () => {
+    console.log('local : ', ++cntup)
+
+    //state변수 증가
+    setCntUpSt(++cntUpSt);
+    console.log('state : ', cntUpSt)
+  };
+
+
+  const handledown = () => {
+    console.log('local : ', ++cntdown)
+
+    //state변수 증가
+    setCntDownSt(++cntDownSt);
+    console.log('state : ', cntDownSt)
+  };
+
+  //useEffect(()=>{} , []) : 인자가 2개가능, 콜백함수
+  //useEffect() : 랜더링시 계속 발생
+  useEffect(() => {
+    console.log('useEffect 랜더링 발생시 계속 수행=> ', cntUpSt)
+  });
+
+  //useEffect() : 랜더링시 계속 발생
+  useEffect(() => {
+    console.log('useEffect 랜더링 발생시 1회 수행=> ', cntUpSt)
+  }, []);
+
+  //useEffect() : 관련 state변수가  변경될때 실행
+  useEffect(() => {
+    console.log('useEffect 랜더링 발생시 1회 수행=> ', cntUpSt)
+  }, [cntUpSt]);
+
+
 
   let lis = [];
   for (let [k, v] of Object.entries(myinfo)) {
     lis.push(<li key={myinfo.movieCd + k}><span className='pan1'>{k}</span><span className='pan2'>{v}</span></li>);
-    console.log(k, v)
+    //console.log(k, v)
   }
+
+  //---------------------------------
+
+  // 시계아이콘 클릭하면 변수변경
+  let [flag, setFlag] = useState(true)
+  const handleTimer = () => {
+    //setFlag2(flag2 === 'none'?'inline-flex':'none');
+    setFlag(!flag)
+  };
+
+
+
   return (
     <>
       <h1>영화 상세</h1>
@@ -81,7 +144,20 @@ function MvInfo() {
       <ul>
         {lis}
       </ul>
-
+      <div className='TTs'>
+        <span onClick={handleup} className='o'>👍</span>
+        <div className='p'>{cntUpSt}</div>
+        <span onClick={handledown} className='o'>🧨</span>
+        <div className='p'>{cntDownSt}</div>
+        <span onClick={handleTimer} className='o'>⏱</span>
+      </div >
+      
+      
+      <div>
+        {/* style={{'display':flag2}}><MyTimer> */}
+        {flag && <MyTimer />} 
+        {/*flag, cntDownSt : Hook-usestate의 영향을 받는 곳에 배치.*/}
+      </div> 
     </>
   );
 }

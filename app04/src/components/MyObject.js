@@ -51,10 +51,11 @@ export default function MyObject() {
   // console.log(fcom)
 
 const myInfo = mv.movieInfoResult.movieInfo;
+// 변수 선언 -> 임포트한 값.요소집합.요소 집합 : 내가 하고자하는 요소의 배열을 추출
 console.log(myInfo)
 
-const actor = myInfo.actors;
-console.log(actor)
+const actor = myInfo.actors; // 추출한 값에서 원하는 인자를 추출
+console.log(actor) 
 
 const name = actor.map((item) => 
 <li key = {item.cast.replace(' ', '') + item.peopleNm}>{item.peopleNm} : {item.cast}</li>)

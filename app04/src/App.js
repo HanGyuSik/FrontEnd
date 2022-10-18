@@ -1,10 +1,10 @@
 import'./App.css'
-import MyObject from './components/MyObject';
+import MvInfo from './project/MvInfo';
 function App() {
   
   return (
     <>
-      <MyObject/>
+      <MvInfo/>
     </>
   );
 }
