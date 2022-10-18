@@ -1,12 +1,12 @@
 import './Mv.css';
-import t from './timer'
+import './MyTimer';
 import mv from '../jsondata/mv.json';
 
 
 //useState Hook
 import { useState, useEffect } from 'react';
 import React from 'react';
-import MyTimer from './timer';
+import MyTimer from './MyTimer';
 
 function MvInfo() {
 
