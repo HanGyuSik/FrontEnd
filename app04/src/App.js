@@ -1,12 +1,12 @@
-import'./App.css'
-import MvInfo from './project/MvInfo';
+//import style from './App.module.css';
+import Mvlist from './project/Mvlist';
+
+
 function App() {
-  
   return (
     <>
-      <MvInfo/>
+      <Mvlist />
     </>
-  );
+  )
 }
-
 export default App;

@@ -4,7 +4,7 @@ import mv from '../jsondata/mv.json';
 
 
 //useState Hook
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import React from 'react';
 import MyTimer from './MyTimer';
 
@@ -35,6 +35,12 @@ function MvInfo() {
     myinfo[keys[k]] = Info[k];
   }
   // console.log(myinfo)
+
+  //useRef 변수
+  let cntRef = useRef(0);
+  let txtRef = useRef(0);
+
+
 
 
   // key2에 해당하는 값 배열에서 추출
@@ -71,6 +77,7 @@ function MvInfo() {
   //state변수 
   let [cntUpSt, setCntUpSt] = useState(0); //변수와 함수를 쌍으로 반환 , (0) : 초기값
   let [cntDownSt, setCntDownSt] = useState(0);
+  let [text1, setText1] = useState([]);
 
   const handleup = () => {
     console.log('local : ', ++cntup)
@@ -78,7 +85,9 @@ function MvInfo() {
     //state변수 증가
     setCntUpSt(++cntUpSt);
     console.log('state : ', cntUpSt)
+    ++cntRef.current
   };
+
 
 
   const handledown = () => {
@@ -87,17 +96,22 @@ function MvInfo() {
     //state변수 증가
     setCntDownSt(++cntDownSt);
     console.log('state : ', cntDownSt)
+    ++cntRef.current
   };
 
   //useEffect(()=>{} , []) : 인자가 2개가능, 콜백함수
   //useEffect() : 랜더링시 계속 발생
   useEffect(() => {
     console.log('useEffect 랜더링 발생시 계속 수행=> ', cntUpSt)
+    console.log('ref cnt : ', cntRef.current)
   });
 
   //useEffect() : 랜더링시 계속 발생
   useEffect(() => {
     console.log('useEffect 랜더링 발생시 1회 수행=> ', cntUpSt)
+    console.log('ref cnt : ', cntRef.current)
+
+    txtRef.current.focus();
   }, []);
 
   //useEffect() : 관련 state변수가  변경될때 실행
@@ -106,10 +120,17 @@ function MvInfo() {
   }, [cntUpSt]);
 
 
+  //form submit
+  const handleSubmit = (e) => {
+    e.preventDefault(); // submit의 액션(타 페이지이동)방지
+    console.log(txtRef.current.value)
+    setText1([<li key={txtRef.current.value} className='txt'>
+      {txtRef.current.value}</li>, ...text1])
+  }
 
   let lis = [];
   for (let [k, v] of Object.entries(myinfo)) {
-    lis.push(<li key={myinfo.movieCd + k}><span className='pan1'>{k}</span><span className='pan2'>{v}</span></li>);
+    lis.push(<li key={myinfo.movieCd + k}><span>{k}</span><span className='pan2'>{v}</span></li>);
     //console.log(k, v)
   }
 
@@ -120,6 +141,7 @@ function MvInfo() {
   const handleTimer = () => {
     //setFlag2(flag2 === 'none'?'inline-flex':'none');
     setFlag(!flag)
+    console.log('ref cnt : ', cntRef.current)
   };
 
 
@@ -127,6 +149,11 @@ function MvInfo() {
   return (
     <>
       <h1>영화 상세</h1>
+      <div className='ddr'>
+        {/* style={{'display':flag2}}><MyTimer> */}
+        {flag && <MyTimer />}
+        {/*flag, cntDownSt : Hook-usestate의 영향을 받는 곳에 배치.*/}
+      </div>
       {/* <ul>
         <li><span>영화명</span><sapn>{Info.movieNm}</sapn></li>
         <li><span>영화코드</span></li>
@@ -151,13 +178,17 @@ function MvInfo() {
         <div className='p'>{cntDownSt}</div>
         <span onClick={handleTimer} className='o'>⏱</span>
       </div >
-      
-      
+
       <div>
-        {/* style={{'display':flag2}}><MyTimer> */}
-        {flag && <MyTimer />} 
-        {/*flag, cntDownSt : Hook-usestate의 영향을 받는 곳에 배치.*/}
-      </div> 
+        <form className='fo' onSubmit={handleSubmit}>
+          <input type="text" ref={txtRef} placeholder='댓글을 입력하시오'></input>
+          <button type='submit'>등록</button>
+          <button type='reset'>취소</button>
+        </form>
+        <div className='mvF'>
+          {text1}
+        </div>
+      </div>
     </>
   );
 }
