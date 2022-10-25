@@ -4,10 +4,18 @@ import "../CSS/Weather_1.css"
 import WeatherDay from "./WeatherDay";
 // useState import
 import { useState } from "react";
-
-
+import { useNavigate } from "react-router-dom"
 
 function WeatherMain() {
+  const url = {
+    '메인화면': '/'
+  }
+  const Click = (k) => {
+    navi(url[k])
+    console.log(url[k])
+  }
+  const navi = useNavigate()
+
   let[day, setDay] = useState(3);
   // 변하지 않는 함수 지정 : 
   const handleClick = (d) => {
@@ -21,6 +29,7 @@ function WeatherMain() {
 
     <>
       <h1>날씨예보</h1>
+      <button className="bt22" onClick={() => Click('메인화면')}>메인화면</button>
       {/* form으로 버튼 생성*/}
       {/* 버튼으로 어떠한 이벤트가 발생하게 하기위해 onclick함수 생성 */}
       <form className="weather_form">
